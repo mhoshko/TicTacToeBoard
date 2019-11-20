@@ -31,6 +31,27 @@ TEST(TicTacToeBoardTest, starttoggle){
 }
 
 
+TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
+  TicTacToeBoard board;
+  board.placePiece(1, 2);
+	ASSERT_EQ(board.placePiece(2, 3), O);
+}
+
+TEST(TicTacToeBoardTest, checkfullboard){
+  TicTacToeBoard board;
+  board.placePiece(1,1);
+  board.placePiece(1,2);
+  board.placePiece(1,3);
+  board.placePiece(2,1);
+  board.placePiece(2,2);
+  board.placePiece(2,3);
+  board.placePiece(3,1);
+  board.placePiece(3,2);
+  board.placePiece(3,3);
+	ASSERT_EQ(board.placePiece(2, 3), Invalid);
+}
+
+
 TEST(TicTacToeBoardTest, twotoggles){
   TicTacToeBoard board;
   board.toggleTurn();
