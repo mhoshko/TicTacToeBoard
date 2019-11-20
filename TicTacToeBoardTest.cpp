@@ -14,19 +14,19 @@ class TicTacToeBoardTest : public ::testing::Test{
 };
 
 // EXAMPLE TEST FORMAT
-TEST(TicTacToeBoardTest, toggleTurn){
+TEST(TicTacToeBoardTest, starttoggle){
   TicTacToeBoard board;
 	ASSERT_EQ(board.ToggleTurn(), O);
 }
 
 
-TEST(TicTacToeBoardTest, toggleTurn){
+TEST(TicTacToeBoardTest, twotoggles){
   TicTacToeBoard board;
   board.ToggleTurn();
 	ASSERT_EQ(board.ToggleTurn(), X);
 }
 
-TEST(TicTacToeBoardTest, toggleTurn){
+TEST(TicTacToeBoardTest, threetoggles){
   TicTacToeBoard board;
   board.ToggleTurn();
   board.ToggleTurn();
