@@ -16,7 +16,7 @@ class TicTacToeBoardTest : public ::testing::Test{
 // EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, placedX){
   TicTacToeBoard board;
-	ASSERT_EQ(board.placePiece(1, 2), O);
+	ASSERT_EQ(board.placePiece(1, 2), X);
 }
 
 TEST(TicTacToeBoardTest, starttoggle){
