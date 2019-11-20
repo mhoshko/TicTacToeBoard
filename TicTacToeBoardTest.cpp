@@ -19,6 +19,12 @@ TEST(TicTacToeBoardTest, placedX){
 	ASSERT_EQ(board.placePiece(1, 2), X);
 }
 
+TEST(TicTacToeBoardTest, checkTakenPlace){
+  TicTacToeBoard board;
+	ASSERT_EQ(board.placePiece(1, 2), X);
+}
+
+
 TEST(TicTacToeBoardTest, starttoggle){
   TicTacToeBoard board;
 	ASSERT_EQ(board.toggleTurn(), O);
