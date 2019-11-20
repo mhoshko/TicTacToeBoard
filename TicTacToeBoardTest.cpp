@@ -16,19 +16,19 @@ class TicTacToeBoardTest : public ::testing::Test{
 // EXAMPLE TEST FORMAT
 TEST(TicTacToeBoardTest, starttoggle){
   TicTacToeBoard board;
-	ASSERT_EQ(board.ToggleTurn(), O);
+	ASSERT_EQ(board.toggleTurn(), O);
 }
 
 
 TEST(TicTacToeBoardTest, twotoggles){
   TicTacToeBoard board;
-  board.ToggleTurn();
-	ASSERT_EQ(board.ToggleTurn(), X);
+  board.toggleTurn();
+	ASSERT_EQ(board.toggleTurn(), X);
 }
 
 TEST(TicTacToeBoardTest, threetoggles){
   TicTacToeBoard board;
-  board.ToggleTurn();
-  board.ToggleTurn();
-	ASSERT_EQ(board.ToggleTurn(), O);
+  board.toggleTurn();
+  board.toggleTurn();
+	ASSERT_EQ(board.toggleTurn(), O);
 }
