@@ -37,20 +37,31 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 	ASSERT_EQ(board.placePiece(2, 3), O);
 }
 
-TEST(TicTacToeBoardTest, checkfullboard){
-  TicTacToeBoard board;
-  board.placePiece(1,1);
-  board.placePiece(1,2);
-  board.placePiece(1,0);
-  board.placePiece(2,1);
-  board.placePiece(2,2);
-  board.placePiece(2,0);
-  board.placePiece(0,1);
-  board.placePiece(0,2);
-  board.placePiece(0,0);
-	ASSERT_EQ(board.placePiece(2, 1), Invalid);
+// TEST(TicTacToeBoardTest, checkfullboard){
+//   TicTacToeBoard board;
+//   board.placePiece(1,1);
+//   board.placePiece(1,2);
+//   board.placePiece(1,0);
+//   board.placePiece(2,1);
+//   board.placePiece(2,2);
+//   board.placePiece(2,0);
+//   board.placePiece(0,1);
+//   board.placePiece(0,2);
+//   board.placePiece(0,0);
+// 	ASSERT_EQ(board.placePiece(2, 1), Invalid);
+// }
+
+TEST(TicTacToeBoardTest, checkgetpieceinit){
+	TicTacToeBoard board;
+	ASSERT_EQ(board.getPiece(0, 0), Blank);
 }
 
+
+TEST(TicTacToeBoardTest, checkgetpieceplaced){
+	TicTacToeBoard board;
+	board[0][0]=X;
+	ASSERT_EQ(board.getPiece(0, 0), X);
+}
 
 TEST(TicTacToeBoardTest, twotoggles){
   TicTacToeBoard board;
