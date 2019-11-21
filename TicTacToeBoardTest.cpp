@@ -48,7 +48,7 @@ TEST(TicTacToeBoardTest, checkfullboard){
   board.placePiece(0,1);
   board.placePiece(0,2);
   board.placePiece(0,0);
-	ASSERT_EQ(board.placePiece(2, 1), '?');
+	ASSERT_EQ(board.placePiece(2, 1), Invalid);
 }
 
 
