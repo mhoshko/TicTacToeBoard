@@ -63,7 +63,7 @@ TEST(TicTacToeBoardTest, checkgetpieceplaced){
 	ASSERT_EQ(board.getPiece(0, 0), X);
 }
 
-TEST(TicTacToeBoardTest, checkgetpieceplaced){
+TEST(TicTacToeBoardTest, checkgetpieceincorrectlyplaced){
 	TicTacToeBoard board;
 	board.placePiece(0,0);
 	board.placePiece(0,0)
