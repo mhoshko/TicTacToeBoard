@@ -57,11 +57,11 @@ TEST(TicTacToeBoardTest, checkgetpieceinit){
 }
 
 
-TEST(TicTacToeBoardTest, checkgetpieceplaced){
-	TicTacToeBoard board;
-	board[0][0]=X;
-	ASSERT_EQ(board.getPiece(0, 0), X);
-}
+// TEST(TicTacToeBoardTest, checkgetpieceplaced){
+// 	TicTacToeBoard board;
+// 	board[0][0]=X;
+// 	ASSERT_EQ(board.getPiece(0, 0), X);
+// }
 
 TEST(TicTacToeBoardTest, twotoggles){
   TicTacToeBoard board;
