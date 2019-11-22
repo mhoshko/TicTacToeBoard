@@ -51,11 +51,11 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 // 	ASSERT_EQ(board.placePiece(2, 1), Invalid);
 // }
 
-// TEST(TicTacToeBoardTest, nomoveswinner){
-// 	TicTacToeBoard board;
-// 	board.placePiece(0,0);
-// 	ASSERT_EQ(board.getWinner(), Invalid);
-// }
+TEST(TicTacToeBoardTest, nomoveswinner){
+	TicTacToeBoard board;
+	board.placePiece(0,0);
+	ASSERT_EQ(board.getWinner(), '?');
+}
 
 TEST(TicTacToeBoardTest, winner){
 	TicTacToeBoard board;
