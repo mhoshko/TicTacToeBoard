@@ -64,7 +64,7 @@ Piece TicTacToeBoard::getWinner(){
         filled=0;
         break;
       }
-      else filled=1;
+      else if(board[i][j]!=Blank) filled=1;
     }
   }
   if(filled==1) return Blank;
