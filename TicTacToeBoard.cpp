@@ -58,8 +58,6 @@ Piece TicTacToeBoard::getPiece(int row, int column){
 
 
 Piece TicTacToeBoard::getWinner(){
-
-
   if(getLineWinner(0, 0, 0, 1, 0, 2)!=Invalid) return getPiece(0,0);
   if(getLineWinner(1, 0, 1, 1, 1, 2)!=Invalid) return getPiece(1,0);
   if(getLineWinner(2, 0, 2, 1, 2, 2)!=Invalid) return getPiece(2,0);
@@ -70,14 +68,15 @@ Piece TicTacToeBoard::getWinner(){
   if(getLineWinner(0, 0, 1, 0, 2, 0)!=Invalid) return getPiece(0,0);
   if(getLineWinner(0, 1, 1, 1, 2, 1)!=Invalid) return getPiece(0,1);
   if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
-  int filled = 9;
+  int filled = 0;
   for(int i=0; i<BOARDSIZE; i++){
     for(int j=0; j<BOARDSIZE; j++){
-      if(getPiece(i, j) == Blank) filled--;
+      if(getPiece(i, j) == Blank) {
+        filled++;
     }
   }
-  if(filled==0) return Invalid;
-  else return Blank;
+  if(filled==9) return Blank;
+  else return Invalid;
 }
 
 
