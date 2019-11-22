@@ -33,13 +33,13 @@ class TicTacToeBoard
 
         /**
          * Places the piece of the current turn on the board, returns what
-         * piece is placed, and toggles which Piece's turn it is. placePiece does 
+         * piece is placed, and toggles which Piece's turn it is. placePiece does
          * NOT allow to place a piece in a location where there is already a piece.
-         * In that case, placePiece just returns what is already at that location. 
+         * In that case, placePiece just returns what is already at that location.
          * Out of bounds coordinates return the Piece Invalid value. When the game
          * is over, no more pieces can be placed so attempting to place a piece
          * should neither change the board nor change whose turn it is.
-         **/  
+         **/
         Piece placePiece(int row, int column);
 
         /**
@@ -53,6 +53,9 @@ class TicTacToeBoard
          * is not over, or Blank if the board is filled and no one has won.
          **/
         Piece getWinner();
+
+        Piece getLineWinner(int coord1, int coord2, int coord3, int coord4, int coord5, int coord6);
+
 };
 
 #endif

@@ -54,6 +54,37 @@ Piece TicTacToeBoard::getPiece(int row, int column){
  * Returns which Piece has won, if there is a winner, Invalid if the game
  * is not over, or Blank if the board is filled and no one has won.
 **/
+
+
 Piece TicTacToeBoard::getWinner(){
-  return Invalid;
+  if(getLineWinner(0, 0, 0, 1, 0, 2)!=Invalid) return getPiece(0,0);
+  if(getLineWinner(1, 0, 1, 1, 1, 2)!=Invalid) return getPiece(1,0);
+  if(getLineWinner(2, 0, 2, 1, 2, 2)!=Invalid) return getPiece(2,0);
+
+  if(getLineWinner(0, 0, 1, 1, 2, 2)!=Invalid) return getPiece(0,0);
+  if(getLineWinner(0, 2, 1, 1, 2, 0)!=Invalid) return getPiece(0,2);
+
+  if(getLineWinner(0, 0, 1, 0, 2, 0)!=Invalid) return getPiece(0,0);
+  if(getLineWinner(0, 1, 1, 1, 2, 1)!=Invalid) return getPiece(0,1);
+  if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
+
+  bool filled;
+  for(int i=0; i<BOARDSIZE; i++){
+    for(int j=0; j<BOARDSIZE; j++){
+      if(board[i][j] == Blank){
+        filled=FALSE;
+        break;
+      }
+      else filled=TRUE;
+    }
+  }
+  if(filled==TRUE) return Blank;
+  else return Invalid;
+}
+
+
+Piece TicTacToeBoard::getLineWinner(int coord1, int coord2, int coord3, int coord4, int coord5, int coord6){
+  if(getPiece(coord1, coord2)== getPiece(coord3, coord4) && getPiece(coord1, coord2)== getPiece(coord5, coord6)){
+    return getPiece(coord1, coord2);
+  }else return Invalid;
 }

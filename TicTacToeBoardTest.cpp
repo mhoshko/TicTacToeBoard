@@ -51,6 +51,10 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 // 	ASSERT_EQ(board.placePiece(2, 1), Invalid);
 // }
 
+TEST(TicTacToeBoardTest, nomoveswinner){
+	ASSERT_EQ(board.getWinner(), Invalid);
+}
+
 TEST(TicTacToeBoardTest, checkgetpieceinit){
 	TicTacToeBoard board;
 	ASSERT_EQ(board.getPiece(0, 0), Blank);
