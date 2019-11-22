@@ -21,6 +21,7 @@ TEST(TicTacToeBoardTest, placedX){
 
 TEST(TicTacToeBoardTest, checkTakenPlace){
   TicTacToeBoard board;
+	board.placePiece(1,2);
 	ASSERT_EQ(board.placePiece(1, 2), X);
 }
 
@@ -37,19 +38,6 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 	ASSERT_EQ(board.placePiece(2, 3), O);
 }
 
-// TEST(TicTacToeBoardTest, checkfullboard){
-//   TicTacToeBoard board;
-//   board.placePiece(1,1);
-//   board.placePiece(1,2);
-//   board.placePiece(1,0);
-//   board.placePiece(2,1);
-//   board.placePiece(2,2);
-//   board.placePiece(2,0);
-//   board.placePiece(0,1);
-//   board.placePiece(0,2);
-//   board.placePiece(0,0);
-// 	ASSERT_EQ(board.placePiece(2, 1), );
-// }
 
 TEST(TicTacToeBoardTest, nomoveswinner){
 	TicTacToeBoard board;
@@ -57,14 +45,14 @@ TEST(TicTacToeBoardTest, nomoveswinner){
 	ASSERT_EQ(board.getWinner(), 32);
 }
 
-TEST(TicTacToeBoardTest, nowinner){
-	TicTacToeBoard board;
-	board.placePiece(0,0);
-	board.placePiece(0,1);
-	board.placePiece(1,0);
-	board.placePiece(2,2);
-	ASSERT_EQ(board.getWinner(), Invalid);
-}
+// TEST(TicTacToeBoardTest, nowinner){
+// 	TicTacToeBoard board;
+// 	board.placePiece(0,0);
+// 	board.placePiece(0,1);
+// 	board.placePiece(1,0);
+// 	board.placePiece(2,2);
+// 	ASSERT_EQ(board.getWinner(), Invalid);
+// }
 
 TEST(TicTacToeBoardTest, winner){
 	TicTacToeBoard board;
