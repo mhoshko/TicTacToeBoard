@@ -65,7 +65,7 @@ Piece TicTacToeBoard::getWinner(){
       }
     }
   }
-  if(filled==9) return Blank;
+  if(filled==0) return Blank;
 
   if(getLineWinner(0, 0, 0, 1, 0, 2)!=Invalid) return getPiece(0,0);
   if(getLineWinner(1, 0, 1, 1, 1, 2)!=Invalid) return getPiece(1,0);
