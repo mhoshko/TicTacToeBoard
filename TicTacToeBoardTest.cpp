@@ -45,14 +45,6 @@ TEST(TicTacToeBoardTest, nomoveswinner){
 	ASSERT_EQ(board.getWinner(), 32);
 }
 
-// TEST(TicTacToeBoardTest, nowinner){
-// 	TicTacToeBoard board;
-// 	board.placePiece(0,0);
-// 	board.placePiece(0,1);
-// 	board.placePiece(1,0);
-// 	board.placePiece(2,2);
-// 	ASSERT_EQ(board.getWinner(), Invalid);
-// }
 
 TEST(TicTacToeBoardTest, winner){
 	TicTacToeBoard board;
