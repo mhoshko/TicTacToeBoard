@@ -72,9 +72,7 @@ Piece TicTacToeBoard::getWinner(){
   int filled = 0;
   for(int i=0; i<BOARDSIZE; i++){
     for(int j=0; j<BOARDSIZE; j++){
-      if(getPiece(i, j) != Blank){
-        filled++;
-      }
+      if(getPiece(i, j) != Blank) filled++;
     }
   }
   if(filled!=9) return Invalid;
