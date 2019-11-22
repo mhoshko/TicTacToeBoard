@@ -37,19 +37,19 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 	ASSERT_EQ(board.placePiece(2, 3), O);
 }
 
-// TEST(TicTacToeBoardTest, checkfullboard){
-//   TicTacToeBoard board;
-//   board.placePiece(1,1);
-//   board.placePiece(1,2);
-//   board.placePiece(1,0);
-//   board.placePiece(2,1);
-//   board.placePiece(2,2);
-//   board.placePiece(2,0);
-//   board.placePiece(0,1);
-//   board.placePiece(0,2);
-//   board.placePiece(0,0);
-// 	ASSERT_EQ(board.placePiece(2, 1), Invalid);
-// }
+TEST(TicTacToeBoardTest, checkfullboard){
+  TicTacToeBoard board;
+  board.placePiece(1,1);
+  board.placePiece(1,2);
+  board.placePiece(1,0);
+  board.placePiece(2,1);
+  board.placePiece(2,2);
+  board.placePiece(2,0);
+  board.placePiece(0,1);
+  board.placePiece(0,2);
+  board.placePiece(0,0);
+	ASSERT_EQ(board.placePiece(2, 1), '?');
+}
 
 TEST(TicTacToeBoardTest, nomoveswinner){
 	TicTacToeBoard board;
@@ -79,7 +79,7 @@ TEST(TicTacToeBoardTest, nowinner){
 	board.placePiece(1,2);
 	board.placePiece(2,1);
 	board.placePiece(2,2);
-	ASSERT_EQ(board.getWinner(), 32);
+	ASSERT_EQ(board.getWinner(), Blank);
 }
 
 TEST(TicTacToeBoardTest, checkgetpieceinit){
