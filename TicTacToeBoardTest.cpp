@@ -53,6 +53,7 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 
 TEST(TicTacToeBoardTest, nomoveswinner){
 	TicTacToeBoard board;
+	board.placePiece(0,0);
 	ASSERT_EQ(board.getWinner(), Blank);
 }
 
