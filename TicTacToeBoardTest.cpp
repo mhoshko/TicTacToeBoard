@@ -103,7 +103,7 @@ TEST(TicTacToeBoardTest, checkgetpieceincorrectlyplaced){
 
 TEST(TicTacToeBoardTest, outofbounds){
 	TicTacToeBoard board;
-	ASSERT_EQ(board.getPiece(4,4), X);
+	ASSERT_EQ(board.getPiece(4,4), Invalid);
 }
 
 
