@@ -79,7 +79,7 @@ TEST(TicTacToeBoardTest, nowinner){
 	board.placePiece(1,2);
 	board.placePiece(2,1);
 	board.placePiece(2,2);
-	ASSERT_EQ(board.getWinner(), ' ');
+	ASSERT_EQ(board.getWinner(), 32);
 }
 
 TEST(TicTacToeBoardTest, checkgetpieceinit){
