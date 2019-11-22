@@ -47,6 +47,7 @@ Piece TicTacToeBoard::placePiece(int row, int column){
  * are no pieces there, or Invalid if the coordinates are out of bounds
 **/
 Piece TicTacToeBoard::getPiece(int row, int column){
+  if(row<0 || row>2 && (column<0 || column>2)) return Invalid;
   return board[row][column];
 }
 
