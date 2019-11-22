@@ -76,7 +76,7 @@ Piece TicTacToeBoard::getWinner(){
       }
     }
   }
-  if(filled==9) return Blank;
+  if(filled==0) return Blank;
   else return Invalid;
 }
 
