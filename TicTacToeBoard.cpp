@@ -69,8 +69,8 @@ Piece TicTacToeBoard::getWinner(){
   if(getLineWinner(0, 1, 1, 1, 2, 1)!=Invalid) return getPiece(0,1);
   if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
   //int filled = 0;
-  for(int i=0; i<BOARDSIZE; i++){
-    for(int j=0; j<BOARDSIZE; j++){
+  for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
       if(getPiece(i, j) == Blank) {
         return Invalid;
       }
