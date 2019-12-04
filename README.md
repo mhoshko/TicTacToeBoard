@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mhoshko/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/mhoshko/TicTacToeBoard)
 # TicTacToeBoard
 
 ## Associated Enumerated Types
