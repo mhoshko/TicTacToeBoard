@@ -74,30 +74,8 @@ Piece TicTacToeBoard::getWinner(){
       if(getPiece(i,j)!=X && getPiece(i,j)!=O) return NoWin;
     }
   }
-  // if(getPiece(0,0)!=X && getPiece(0,0)!=O) return NoWin;
-  // if(getPiece(0,1)!=X && getPiece(0,1)!=O) return NoWin;
-  // if(getPiece(0,2)!=X && getPiece(0,2)!=O) return NoWin;
-  // if(getPiece(1,0)!=X && getPiece(1,0)!=O) return NoWin;
-  // if(getPiece(1,1)!=X && getPiece(1,1)!=O) return NoWin;
-  // if(getPiece(1,2)!=X && getPiece(1,2)!=O) return NoWin;
-  // if(getPiece(2,0)!=X && getPiece(2,0)!=O) return NoWin;
-  // if(getPiece(2,1)!=X && getPiece(2,1)!=O) return NoWin;
-  // if(getPiece(2,2)!=X && getPiece(2,2)!=O) return NoWin;
-
-
-  //if(fullBoard()==false) return Invalid;
   return Blank;
 }
-
-// bool TicTacToeBoard::fullBoard(){
-//
-//
-//   return true;
-//   // for(int i=0; i<3; i++)
-//   //   for(int j=0; j<3; j++)
-//   //     if(board[i][j] == Blank) return False;
-//   // return True;
-// }
 
 
 Piece TicTacToeBoard::getLineWinner(int coord1, int coord2, int coord3, int coord4, int coord5, int coord6){
