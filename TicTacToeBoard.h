@@ -9,6 +9,7 @@ enum Piece
     O = 'O',
     Invalid = '?',
     Blank = ' '
+    NoWin = "!"
 
 };
 

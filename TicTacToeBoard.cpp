@@ -69,15 +69,15 @@ Piece TicTacToeBoard::getWinner(){
   if(getLineWinner(0, 1, 1, 1, 2, 1)!=Invalid) return getPiece(0,1);
   if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
 
-  if(getPiece(0,0)!=X && getPiece(0,0)!=O) return Invalid;
-  if(getPiece(0,1)!=X && getPiece(0,1)!=O) return Invalid;
-  if(getPiece(0,2)!=X && getPiece(0,2)!=O) return Invalid;
-  if(getPiece(1,0)!=X && getPiece(1,0)!=O) return Invalid;
-  if(getPiece(1,1)!=X && getPiece(1,1)!=O) return Invalid;
-  if(getPiece(1,2)!=X && getPiece(1,2)!=O) return Invalid;
-  if(getPiece(2,0)!=X && getPiece(2,0)!=O) return Invalid;
-  if(getPiece(2,1)!=X && getPiece(2,1)!=O) return Invalid;
-  if(getPiece(2,2)!=X && getPiece(2,2)!=O) return Invalid;
+  if(getPiece(0,0)!=X && getPiece(0,0)!=O) return NoWin;
+  if(getPiece(0,1)!=X && getPiece(0,1)!=O) return NoWin;
+  if(getPiece(0,2)!=X && getPiece(0,2)!=O) return NoWin;
+  if(getPiece(1,0)!=X && getPiece(1,0)!=O) return NoWin;
+  if(getPiece(1,1)!=X && getPiece(1,1)!=O) return NoWin;
+  if(getPiece(1,2)!=X && getPiece(1,2)!=O) return NoWin;
+  if(getPiece(2,0)!=X && getPiece(2,0)!=O) return NoWin;
+  if(getPiece(2,1)!=X && getPiece(2,1)!=O) return NoWin;
+  if(getPiece(2,2)!=X && getPiece(2,2)!=O) return NoWin;
 
 
   //if(fullBoard()==false) return Invalid;

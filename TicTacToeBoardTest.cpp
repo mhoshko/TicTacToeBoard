@@ -39,11 +39,11 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 }
 
 
-TEST(TicTacToeBoardTest, nomoveswinner){
-	TicTacToeBoard board;
-	board.placePiece(0,0);
-	ASSERT_EQ(board.getWinner(), 32);
-}
+// TEST(TicTacToeBoardTest, nomoveswinner){
+// 	TicTacToeBoard board;
+// 	board.placePiece(0,0);
+// 	ASSERT_EQ(board.getWinner(), 32);
+// }
 
 
 TEST(TicTacToeBoardTest, winner){
@@ -98,7 +98,7 @@ TEST(TicTacToeBoardTest, outofbounds){
 TEST(TicTacToeBoardTest, nowinner){
 	TicTacToeBoard board;
 	board.placePiece(0,0);
-	ASSERT_EQ(board.getWinner(), Invalid);
+	ASSERT_EQ(board.getWinner(), NoWin);
 }
 
 TEST(TicTacToeBoardTest, twotoggles){
