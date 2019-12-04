@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/mhoshko/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/mhoshko/TicTacToeBoard)
+[![Coverage Status](https://coveralls.io/repos/github/mhoshko/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/mhoshko/TicTacToeBoard?branch=master)
 # TicTacToeBoard
 
 ## Associated Enumerated Types
