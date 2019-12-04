@@ -9,6 +9,7 @@ enum Piece
     O = 'O',
     Invalid = '?',
     Blank = ' '
+
 };
 
 /**
@@ -55,6 +56,7 @@ class TicTacToeBoard
         Piece getWinner();
 
         Piece getLineWinner(int coord1, int coord2, int coord3, int coord4, int coord5, int coord6);
+        bool fullBoard();
 
 };
 
