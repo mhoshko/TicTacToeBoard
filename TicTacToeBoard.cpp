@@ -69,15 +69,25 @@ Piece TicTacToeBoard::getWinner(){
   if(getLineWinner(0, 1, 1, 1, 2, 1)!=Invalid) return getPiece(0,1);
   if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
 
-  if(fullBoard()==False) return Invalid;
+  if(fullBoard()==false) return Invalid;
   else return Blank;
 }
 
 bool TicTacToeBoard::fullBoard(){
-  for(int i=0; i<3; i++)
-    for(int j=0; j<3; j++)
-      if(board[i][j] == Blank) return False;
-  return True;
+  if(getPiece(0,0)==Blank) return false;
+  if(getPiece(0,1)==Blank)return false;
+  if(getPiece(0,2)==Blank) return false;
+  if(getPiece(1,0)==Blank) return false;
+  if(getPiece(1,1)==Blank) return false;
+  if(getPiece(1,2)==Blank) return false;
+  if(getPiece(2,0)==Blank) return false;
+  if(getPiece(2,1)==Blank) return false;
+  if(getPiece(2,2)==Blank) return false;
+  return true;
+  // for(int i=0; i<3; i++)
+  //   for(int j=0; j<3; j++)
+  //     if(board[i][j] == Blank) return False;
+  // return True;
 }
 
 
