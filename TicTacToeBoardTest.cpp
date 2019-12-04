@@ -39,12 +39,6 @@ TEST(TicTacToeBoardTest, checkuserplacedafterswitch){
 }
 
 
-// TEST(TicTacToeBoardTest, nomoveswinner){
-// 	TicTacToeBoard board;
-// 	board.placePiece(0,0);
-// 	ASSERT_EQ(board.getWinner(), 32);
-// }
-
 
 TEST(TicTacToeBoardTest, winner){
 	TicTacToeBoard board;
@@ -98,7 +92,7 @@ TEST(TicTacToeBoardTest, outofbounds){
 TEST(TicTacToeBoardTest, nowinner){
 	TicTacToeBoard board;
 	board.placePiece(0,0);
-	ASSERT_EQ(board.getWinner(), NoWin);
+	ASSERT_EQ(board.getWinner(), Blank);
 }
 
 TEST(TicTacToeBoardTest, twotoggles){
