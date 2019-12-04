@@ -98,7 +98,7 @@ TEST(TicTacToeBoardTest, outofbounds){
 TEST(TicTacToeBoardTest, nowinner){
 	TicTacToeBoard board;
 	board.placePiece(0,0);
-	ASSERT_EQ(board.getWinner(), Invalid);
+	ASSERT_EQ(board.getWinner(), Blank);
 }
 
 TEST(TicTacToeBoardTest, twotoggles){
