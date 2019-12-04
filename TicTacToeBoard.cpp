@@ -74,7 +74,7 @@ Piece TicTacToeBoard::getWinner(){
 }
 
 bool TicTacToeBoard::fullBoard(){
-  if(getPiece(0,0)==(X|O)) return false;
+  if(getPiece(0,0)==X || getPiece(0,0)==O) return false;
   if(getPiece(0,1)==Blank)return false;
   if(getPiece(0,2)==Blank) return false;
   if(getPiece(1,0)==Blank) return false;
