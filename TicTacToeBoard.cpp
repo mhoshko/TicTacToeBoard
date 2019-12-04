@@ -70,7 +70,7 @@ Piece TicTacToeBoard::getWinner(){
   if(getLineWinner(0, 2, 1, 2, 2, 2)!=Invalid) return getPiece(0,2);
 
   for(int i=0; i<3;i++){
-    for(int j=0; j<3; j++{
+    for(int j=0; j<3; j++){
       if(getPiece(i,j)!=X && getPiece(i,j)!=O) return NoWin;
     }
   }
